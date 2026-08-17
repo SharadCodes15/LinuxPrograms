@@ -1,68 +1,37 @@
 # 🐧 Linux Programs
 
-> **Learn Linux by doing.**
-> A practical collection of Linux commands, programs, shell scripts, and hands-on exercises.
+A collection of **Linux programs, scripts, commands, and system utilities** created while learning and experimenting with Linux programming.
+
+The goal of this repository is to understand how Linux works under the hood and practice interacting with the operating system through code.
 
 ---
 
-## 📌 About
+## 📌 What's Inside?
 
-This repository contains my **Linux learning and practice programs**, covering everything from basic terminal commands to scripting, file management, processes, permissions, networking, and system utilities.
-
-The goal is simple:
-
-**Learn → Practice → Build → Automate 🚀**
-
----
-
-## 📚 Topics Covered
-
-* 🗂️ File & Directory Management
-* 🔐 File Permissions & Ownership
-* 🔎 File Searching with `find`
-* 📝 Text Processing with `grep`, `sed`, `awk`
-* 📦 Archiving with `tar`
-* ⚙️ Process Management
-* 💾 Disk & Storage Management
-* 🌐 Networking Commands
-* 🐚 Shell Scripting
-* 📜 Command History
-* 🔧 System Utilities
-* 🚀 Linux Automation
+* 🖥️ Linux system programming
+* 📂 File & directory operations
+* ⚙️ Process management
+* 🔄 Signals
+* 🧵 Threads
+* 🔐 Permissions & users
+* 🌐 Networking programs
+* 📡 System information utilities
+* ⌨️ Terminal-based programs
+* 🐚 Shell scripting
+* 🧪 Linux experiments & practice programs
 
 ---
 
-## 🧪 Practice Examples
+## 🛠️ Technologies
 
-```bash
-# Create directories
-mkdir -p project/src project/docs project/bin
-
-# Search for files
-find ~ -type f -name "*.txt" -mtime -3
-
-# Change permissions
-chmod 744 script.sh
-
-# Create compressed archive
-tar -czvf project.tar.gz project
-
-# Search logs
-grep -i "error" *.log
-
-# Check running processes
-ps aux | grep "[f]irefox"
-
-# Check disk usage
-du -sh ~
-df -h
-
-# Test network connectivity
-ping google.com
-
-# View command history
-history | tail -20
-```
+| Technology | Purpose                      |
+| ---------- | ---------------------------- |
+| 🐧 Linux   | Operating System             |
+| C          | System Programming           |
+| C++        | Programming & DSA            |
+| Bash       | Shell Scripting              |
+| Python     | Linux Automation & Utilities |
+| Git        | Version Control              |
 
 ---
 
@@ -71,67 +40,36 @@ history | tail -20
 ```text
 linux-programs/
 │
-├── basics/
-│   ├── file-management/
-│   ├── permissions/
-│   └── commands/
+├── file-management/
+│   ├── create_file.c
+│   ├── read_file.c
+│   └── copy_file.c
 │
-├── shell-scripting/
-│   ├── basics/
-│   └── advanced/
+├── processes/
+│   ├── fork.c
+│   ├── exec.c
+│   └── wait.c
 │
-├── process-management/
+├── signals/
+│   ├── signal.c
+│   └── sigaction.c
+│
+├── threads/
+│   ├── pthread.c
+│   └── mutex.c
 │
 ├── networking/
+│   ├── client.c
+│   └── server.c
 │
-├── file-handling/
+├── shell-scripting/
+│   ├── backup.sh
+│   └── system-info.sh
 │
 └── README.md
 ```
 
-> The structure may evolve as more Linux concepts and programs are added.
-
----
-
-## 🎯 Goals
-
-* Build strong Linux fundamentals
-* Become comfortable with the terminal
-* Learn shell scripting
-* Understand Linux system administration concepts
-* Practice real-world Linux commands
-* Automate repetitive tasks
-* Build useful Linux utilities
-
----
-
-## 🛠️ Requirements
-
-A Linux environment is recommended.
-
-You can use:
-
-* 🐧 Arch Linux
-* 🐧 Ubuntu
-* 🐧 Debian
-* 🐧 Fedora
-* 🐧 Linux Mint
-* 🪟 WSL
-
-Basic tools used throughout the repository include:
-
-```bash
-bash
-coreutils
-grep
-find
-tar
-ps
-df
-du
-ping
-traceroute
-```
+> The structure may evolve as new programs and topics are added.
 
 ---
 
@@ -140,16 +78,36 @@ traceroute
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/linux-programs.git
-```
-
-Enter the repository:
-
-```bash
+git clone https://github.com/YOUR_USERNAME/linux-programs.git
 cd linux-programs
 ```
 
-Run a program or script:
+Compile a C program:
+
+```bash
+gcc program.c -o program
+```
+
+Run it:
+
+```bash
+./program
+```
+
+For programs requiring POSIX threads:
+
+```bash
+gcc program.c -o program -pthread
+```
+
+For C++:
+
+```bash
+g++ program.cpp -o program
+./program
+```
+
+For shell scripts:
 
 ```bash
 chmod +x script.sh
@@ -158,38 +116,114 @@ chmod +x script.sh
 
 ---
 
-## 📈 Learning Path
+## 🎯 Learning Goals
+
+This repository is mainly focused on learning:
 
 ```text
-Linux Basics
-     ↓
-Files & Directories
-     ↓
-Permissions
-     ↓
-Processes
-     ↓
-Text Processing
-     ↓
-Networking
-     ↓
-Shell Scripting
-     ↓
-Automation
-     ↓
-Advanced Linux
+Linux
+ ├── Processes
+ ├── Files
+ ├── Memory
+ ├── Threads
+ ├── Signals
+ ├── IPC
+ ├── Networking
+ ├── Permissions
+ └── System Calls
 ```
+
+The programs start from **basic Linux concepts** and gradually move toward more advanced system-level programming.
 
 ---
 
-## 💡 Philosophy
+## 📚 Topics Roadmap
 
-> **Don't just memorize Linux commands — understand what they do and use them to build something.**
+### 🟢 Beginner
 
-Every program in this repository is intended to be **Educational ,practical, understandable, and useful for hands-on learning**.
+* [ ] Linux commands
+* [ ] File handling
+* [ ] Directory handling
+* [ ] Environment variables
+* [ ] Permissions
+* [ ] Shell scripting
+
+### 🟡 Intermediate
+
+* [ ] `fork()`
+* [ ] `exec()`
+* [ ] `wait()`
+* [ ] Signals
+* [ ] Pipes
+* [ ] Named pipes
+* [ ] Shared memory
+* [ ] Message queues
+* [ ] Threads
+* [ ] Mutexes
+
+### 🔴 Advanced
+
+* [ ] Socket programming
+* [ ] TCP/UDP
+* [ ] Linux system calls
+* [ ] `/proc` filesystem
+* [ ] `/sys` filesystem
+* [ ] Daemons
+* [ ] Linux utilities
+* [ ] System monitoring tools
+* [ ] Terminal UI applications
+
+---
+
+## 💡 Example Projects
+
+Some larger projects that can eventually be built from these concepts:
+
+* 🖼️ Terminal Wallpaper Manager
+* 📊 Network Speed Monitor
+* 💻 System Resource Monitor
+* 🌐 Network Scanner
+* 📁 Terminal File Manager
+* 🔥 Process Manager
+* 📝 Terminal Text Editor
+* 📡 TCP/UDP Chat Application
+* 🐚 Mini Shell
+* 📋 Terminal Todo Manager
+
+---
+
+## 🧠 Philosophy
+
+> **Don't just use Linux — understand how it works.**
+
+Every program in this repository is an opportunity to understand the Linux operating system more deeply.
+
+---
+
+## 📈 Progress
+
+```text
+Linux Programming Journey
+
+████████░░░░░░░░░░░░  40%
+
+Learning → Building → Breaking → Debugging → Understanding
+```
+
+Progress will be updated as new concepts and projects are completed.
+
+---
+
+## 🤝 Contributions
+
+This is primarily a personal learning repository, but suggestions, improvements, and interesting Linux programming ideas are always welcome.
 
 ---
 
 ## ⭐ Support
 
-If this repository helps you learn Linux, consider giving it a ⭐.
+If you find this repository useful, consider giving it a ⭐.
+
+---
+
+
