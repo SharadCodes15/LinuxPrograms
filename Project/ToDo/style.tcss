@@ -1,0 +1,24 @@
+#title {
+    height: 3;
+    content-align: center middle;
+}
+
+#main {
+    height: 1fr;
+    layout: horizontal;
+}
+
+#sidebar {
+    width: 25%;
+    border: solid green;
+}
+
+#content {
+    width: 75%;
+    border: solid blue;
+}
+
+#footer {
+    height: 3;
+    content-align: center middle;
+}
