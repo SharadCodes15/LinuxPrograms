@@ -25,3 +25,6 @@ class Viewer:
         columns = self.cursor.fetchall()
         # [(0, 'id', 'INTEGER', 1, None, 1), (1, 'name', 'TEXT', 0, None, 0)]
         return [column[1] for column in columns]
+
+    def close(self):
+        self.conn.close()
