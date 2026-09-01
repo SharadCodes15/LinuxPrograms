@@ -1,6 +1,6 @@
 from textual.app import App, ComposeResult
 from textual.containers import Horizontal
-from textual.widgets import ListView, Static, ListItem, Label
+from textual.widgets import ListView, Static, ListItem, Label, Footer
 
 from sidebar import Sidebar, SidebarItem
 from content import Content
@@ -9,12 +9,18 @@ from content import Content
 class Todo(App):
 
     CSS_PATH = "./style.tcss"
+    BINDINGS = [
+        ("q", "quit", "Quit"),
+        ("a", "add", "Add"),
+        ("d", "delete", "Delete"),
+    ]
+    
     def compose(self) -> ComposeResult:
         yield Static("Todo App", id="title")
         with Horizontal():
             yield Sidebar(id="sidebar")
             yield Content(id="content")
-        yield Static("q Quit | a Add | d Delete", id="footer")
+        yield Footer()
 
     def on_list_view_selected(
         self,
