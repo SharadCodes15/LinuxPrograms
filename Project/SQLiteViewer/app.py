@@ -26,5 +26,9 @@ class Viewer:
         # [(0, 'id', 'INTEGER', 1, None, 1), (1, 'name', 'TEXT', 0, None, 0)]
         return [column[1] for column in columns]
 
+    def get_table_schema(self, table_name):
+        self.cursor.execute(f"PRAGMA table_info({table_name});")
+        return self.cursor.fetchall()
+
     def close(self):
         self.conn.close()
