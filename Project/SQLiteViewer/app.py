@@ -30,5 +30,14 @@ class Viewer:
         self.cursor.execute(f"PRAGMA table_info({table_name});")
         return self.cursor.fetchall()
 
+    def search_table(self, table_name, column_name, value):
+        quoted_table = '"' + table_name.replace('"', '""') + '"'
+        quoted_column = '"' + column_name.replace('"', '""') + '"'
+        self.cursor.execute(
+            f"SELECT * FROM {quoted_table} WHERE {quoted_column} = ?;",
+            (value,),
+        )
+        return self.cursor.fetchall()
+
     def close(self):
         self.conn.close()
