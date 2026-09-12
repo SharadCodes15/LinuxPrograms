@@ -3,24 +3,25 @@
 A fast, lightweight Linux terminal network-speed monitor built with **Python** and **Textual**.
 
 NETSPEED provides a live terminal UI for monitoring network performance without leaving your command line.
+More Update coming
 
 ## Features
 
-* 🚀 Real-time network speed monitoring
-* 📥 Download speed display
-* 📤 Upload speed display
-* 📊 Live bandwidth statistics
-* 🖥️ Interactive terminal UI powered by Textual
-* 🐧 Designed for Linux
-* ⚡ Lightweight and easy to run
-* ⌨️ Keyboard-friendly interface
+- 🚀 Real-time network speed monitoring
+- 📥 Download speed display
+- 📤 Upload speed display
+- 📊 Live bandwidth statistics
+- 🖥️ Interactive terminal UI powered by Textual
+- 🐧 Designed for Linux
+- ⚡ Lightweight and easy to run
+- ⌨️ Keyboard-friendly interface
 
 ## Requirements
 
-* Linux
-* Python 3.10+
-* `pip`
-* A terminal with Unicode/ANSI support
+- Linux
+- Python 3.10+
+- `pip`
+- A terminal with Unicode/ANSI support
 
 ## Installation
 
@@ -141,9 +142,9 @@ Textual handles the terminal interface, reactive updates, widgets, keyboard inpu
 
 The project uses:
 
-* **Python** — application runtime
-* **Textual** — terminal user interface framework
-* Linux network statistics — network monitoring
+- **Python** — application runtime
+- **Textual** — terminal user interface framework
+- Linux network statistics — network monitoring
 
 Additional Python packages may be required depending on how network statistics are collected.
 
@@ -178,7 +179,6 @@ Contributions are welcome.
 5. Submit a pull request.
 
 Please keep the UI responsive and avoid blocking the Textual event loop.
-
 
 ## Author
 
