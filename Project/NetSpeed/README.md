@@ -152,6 +152,8 @@ Additional Python packages may be required depending on how network statistics a
 
 Clone the project and create a development environment:
 
+You Can Fork it for Contribution
+
 ```bash
 git clone https://github.com/yourusername/netspeed.git
 cd netspeed
