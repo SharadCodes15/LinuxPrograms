@@ -1,5 +1,8 @@
 import shutil
 
+
+''' Detect Distro and pakage manager installed '''
+
 class Detector:
     def __init__(self):
         self.managers  = [

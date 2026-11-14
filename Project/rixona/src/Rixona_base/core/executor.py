@@ -1,6 +1,8 @@
 import subprocess
 from dataclasses import dataclass
 
+''' Execute the command given to the class method '''
+
 @dataclass
 class ReturnResult:
     success : bool
