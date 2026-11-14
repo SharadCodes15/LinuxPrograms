@@ -24,3 +24,31 @@
                 Inheritance
                 super()
 '''
+
+from abc import ABC, abstractmethod
+from ..core.executor import Executor, ReturnResult
+class PackageBackend(ABC):
+
+    def __init__(self,executor:Executor):
+        self.executor = executor
+
+    @abstractmethod
+    def install(self, package_name:str)->ReturnResult:
+        pass
+
+    @abstractmethod
+    def remove(self, package_name:str)->ReturnResult:
+        pass
+
+    @abstractmethod
+    def search(self, package_name:str)->ReturnResult:
+        pass
+
+    @abstractmethod
+    def update(self)->ReturnResult:
+        pass
+
+    @abstractmethod
+    def list_installed(self)->ReturnResult:
+        pass
+
